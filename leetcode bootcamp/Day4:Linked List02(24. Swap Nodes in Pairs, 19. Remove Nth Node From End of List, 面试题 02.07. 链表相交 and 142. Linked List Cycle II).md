@@ -205,13 +205,11 @@ public class Solution {
 
 The problem is solved by using **two points**.
 
-Firstly, define the fast and slow nodes(two points), and their value are the head node
+Firstly, define the **fast and slow nodes**(two points), and their **value are the head node**.
 
-Secondly, each time, the fast node moves twice and the slow node moves once, when the fast and slow nodes are equal, it can proves there is a circle in the linked list.
+Secondly, each time, **the fast node moves twice and the slow node moves once**, when the fast and slow nodes are **equal**, it can proves there is a **circle** in the linked list.
 
-Thirdly, the current node changes to the head node(it points to the third node), repeating the second step.
-
-At last, when the current node. next is null and the current node.next.next is null,  end of the process, return this swapped linked list.
+At last, where there is a circle, **define two new nodes, the node1 is the fast node and the node2 is the head node**, then they move once per loop. When the two nodes are **equal**, its node is **the entrance node of the circle**.
 
 ```JAVA
 public class Solution {
@@ -223,7 +221,7 @@ public class Solution {
         ListNode slowNode = head;
 
         // Each time, the fast node moves twice, but the slow node move once,
-        // when the fast and slow node point to the name node,
+        // when the fast and slow nodes are equal,
         // this can prove that there is a cycle in the linked list.
         // when not, there is no cycle.
         while(fastNode != null && fastNode.next != null){
@@ -231,9 +229,9 @@ public class Solution {
             slowNode = slowNode.next;
 
             // When there is a cycle,
-            // define two nodes, node1 points to the fast node, node2 point2 the head node.
+            // define two nodes, the node1 is the fast node, the node2 is the head node.
             // Then they each move once per loop.
-            // When they point to the same node, it is the entrance of the cycle
+            // When they are equal, it is the entrance of the cycle
             if(fastNode == slowNode){
 
                 ListNode node1 = fastNode;
