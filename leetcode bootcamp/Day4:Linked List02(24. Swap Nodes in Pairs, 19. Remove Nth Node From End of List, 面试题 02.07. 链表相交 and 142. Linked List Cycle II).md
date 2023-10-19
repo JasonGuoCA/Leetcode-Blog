@@ -69,10 +69,6 @@ class Solution {
 
 #### [Article explanation](https://programmercarl.com/0019.%E5%88%A0%E9%99%A4%E9%93%BE%E8%A1%A8%E7%9A%84%E5%80%92%E6%95%B0%E7%AC%ACN%E4%B8%AA%E8%8A%82%E7%82%B9.html#%E6%80%9D%E8%B7%AF)
 
-**Time Complexity:O(n)**
-
-**Space Complexity:O(1)**
-
 **Solution**:
 
 The problem is solved by using **two points and the dummy head node**.
@@ -84,6 +80,10 @@ Secondly, define fast and slow nodes (two points), and their values are the dumm
 Thirdly, the fast node moves to **n + 1** times, ensuring that when fast and slow nodes move together and the fast node is null, the slow node is **the one before the deleted node**.
 
 At last, the slow node points to **the next of the deleted node**.
+
+**Time Complexity:O(n)**
+
+**Space Complexity:O(1)**
 
 ```JAVA
 class Solution {
