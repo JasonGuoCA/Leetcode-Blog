@@ -17,6 +17,10 @@ Thirdly, the current node changes to **the head node(it points to the third node
 
 At last, when the current node. next is null and the current node.next.next is null,  end of the process, return this swapped linked list.
 
+**Time Complexity:O(n)**
+
+**Space Complexity:O(1)**
+
 ```JAVA
 class Solution {
     public ListNode swapPairs(ListNode head) {
@@ -64,6 +68,10 @@ class Solution {
 #### [Video explanation](https://www.bilibili.com/video/BV1vW4y1U7Gf/?spm_id_from=333.788&vd_source=892b6c3c3853e62a1c440b3a6c6946c2)
 
 #### [Article explanation](https://programmercarl.com/0019.%E5%88%A0%E9%99%A4%E9%93%BE%E8%A1%A8%E7%9A%84%E5%80%92%E6%95%B0%E7%AC%ACN%E4%B8%AA%E8%8A%82%E7%82%B9.html#%E6%80%9D%E8%B7%AF)
+
+**Time Complexity:O(n)**
+
+**Space Complexity:O(1)**
 
 **Solution**:
 
@@ -126,6 +134,10 @@ Firstly, calculate **the length** of the linked list A and B, get **the gap** fr
 Secondly, the **longer** linked list move to **gap times**(ensuring that A and B can move together to get the intersection node)
 
 At last, when the nodes of A and B are **equal**, it can get the **intersection** node, return this one. 
+
+**Time Complexity:O(n+m)**
+
+**Space Complexity:O(1)**
 
 ```JAVA
 public class Solution {
@@ -210,6 +222,10 @@ Firstly, define the **fast and slow nodes**(two points), and their **value are t
 Secondly, each time, **the fast node moves twice and the slow node moves once**, when the fast and slow nodes are **equal**, it can proves there is a **circle** in the linked list.
 
 At last, where there is a circle, **define two new nodes, the node1 is the fast node and the node2 is the head node**, then they move once per loop. When the two nodes are **equal**, its node is **the entrance node of the circle**.
+
+**Time Complexity:O(n)**
+
+**Space Complexity:O(1)**
 
 ```JAVA
 public class Solution {
